@@ -13,7 +13,7 @@ void findPrimes(vector<bool>& primes) {
     int ceil = floor(sqrt(primes.size()));
     for (int p = 3; p < ceil; p += 2) {
         if (primes[p] == true) {
-            for (int j = 2 * p; j < primes.size(); j += p) primes[j] = false;
+            for (int j = 3 * p; j < primes.size(); j += 2*p) primes[j] = false;
         }
     }
 
